@@ -4,9 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Viral Downline · Gana con IA</title>
-  <meta name="description" content="Sistema probado que paga $25 por suscriptor. Incluye IA, comunidad, clases en vivo y todo listo para empezar hoy." />
+  <meta name="description" content="Sistema que te ayuda a generar ingresos con IA. Bonos exclusivos, clases en vivo y comunidad. Empieza hoy." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratuito) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ===== RESET Y VARIABLES ===== */
     * {
       margin: 0;
       padding: 0;
@@ -14,61 +19,70 @@
     }
 
     :root {
-      --bg-dark: #0c0f1c;
-      --bg-card: rgba(18, 25, 45, 0.7);
-      --primary: #7c5cff;
-      --primary-glow: rgba(124, 92, 255, 0.3);
-      --secondary: #2fe6c7;
-      --secondary-glow: rgba(47, 230, 199, 0.25);
-      --text-light: #ffffff;
-      --text-muted: #e0e0ffb3;
-      --text-soft: #b0b5d9;
-      --border-light: rgba(255, 255, 255, 0.1);
-      --border-medium: rgba(255, 255, 255, 0.2);
-      --shadow-lg: 0 30px 60px -10px rgba(0, 0, 0, 0.6);
-      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      --radius-card: 28px;
-      --radius-btn: 40px;
+      --bg-dark: #0B1120;
+      --bg-card: rgba(18, 28, 50, 0.7);
+      --primary: #8B5CF6;
+      --primary-dark: #7C3AED;
+      --secondary: #2DD4BF;
+      --accent: #F59E0B;
+      --text-light: #FFFFFF;
+      --text-muted: #CBD5E1;
+      --text-dim: #94A3B8;
+      --border-light: rgba(255,255,255,0.1);
+      --border-medium: rgba(255,255,255,0.2);
+      --shadow-lg: 0 30px 50px -20px rgba(0,0,0,0.8);
+      --font-main: 'Inter', system-ui, sans-serif;
+      --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
     }
 
     body {
       background: var(--bg-dark);
       background-image: 
-        radial-gradient(circle at 20% 30%, rgba(124, 92, 255, 0.15) 0%, transparent 30%),
-        radial-gradient(circle at 90% 70%, rgba(47, 230, 199, 0.12) 0%, transparent 35%),
-        linear-gradient(145deg, #0a0d1a 0%, #141b30 100%);
+        radial-gradient(circle at 20% 40%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(45, 212, 191, 0.1) 0%, transparent 40%);
       color: var(--text-light);
-      font-family: var(--font-sans);
+      font-family: var(--font-main);
+      font-size: 18px;
       line-height: 1.6;
-      font-size: 18px; /* Base más grande */
       -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 80px 0;
     }
 
     /* Tipografía */
     h1, h2, h3 {
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-weight: 800;
       line-height: 1.2;
       letter-spacing: -0.02em;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 8vw, 4.8rem);
+      font-size: clamp(2.8rem, 8vw, 5rem);
       margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: clamp(2.2rem, 6vw, 3.2rem);
-      margin-bottom: 1rem;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      margin-bottom: 2rem;
     }
 
     h3 {
       font-size: 1.8rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     p {
       margin-bottom: 1.5rem;
-      color: var(--text-soft);
+      color: var(--text-muted);
       font-size: 1.1rem;
     }
 
@@ -79,26 +93,76 @@
       color: transparent;
     }
 
-    /* Layout */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 2rem;
+    .text-highlight {
+      background: linear-gradient(145deg, var(--accent), #FBBF24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
     }
 
-    section {
-      padding: 5rem 0;
+    .lead {
+      font-size: 1.4rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 2rem;
     }
 
-    /* Header / Nav */
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-light);
+      color: white;
+    }
+
+    .btn-primary {
+      background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+      border: none;
+      box-shadow: 0 20px 30px -10px rgba(139, 92, 246, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 40px -10px rgba(139, 92, 246, 0.6);
+    }
+
+    .btn-wa {
+      background: #25D366;
+      border: none;
+      box-shadow: 0 20px 30px -10px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-wa:hover {
+      background: #20b859;
+      transform: translateY(-4px);
+    }
+
+    .btn-large {
+      padding: 20px 48px;
+      font-size: 1.5rem;
+    }
+
+    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(10, 15, 30, 0.7);
+      background: rgba(11, 17, 32, 0.8);
       border-bottom: 1px solid var(--border-light);
-      padding: 1rem 0;
+      padding: 16px 0;
     }
 
     .nav-container {
@@ -110,16 +174,16 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-weight: 700;
-      font-size: 1.4rem;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 800;
     }
 
     .logo-icon {
       width: 40px;
       height: 40px;
       background: linear-gradient(145deg, var(--primary), var(--secondary));
-      border-radius: 16px;
+      border-radius: 14px;
       position: relative;
       overflow: hidden;
     }
@@ -136,168 +200,95 @@
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 32px;
       align-items: center;
     }
 
     .nav-links a {
-      color: var(--text-soft);
+      color: var(--text-muted);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.2s;
-      font-size: 1.1rem;
     }
 
     .nav-links a:hover {
       color: white;
     }
 
-    /* Botones */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 1rem 2rem;
-      border-radius: var(--radius-btn);
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-      background: rgba(255,255,255,0.05);
-      border-color: var(--border-light);
-      color: white;
+    /* Hero / Gancho */
+    .hero {
+      padding-top: 40px;
     }
 
-    .btn-primary {
-      background: linear-gradient(145deg, var(--primary), #5b3ee0);
-      box-shadow: 0 15px 25px -5px var(--primary-glow);
-      border: none;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 25px 30px -5px var(--primary-glow);
-    }
-
-    .btn-wa {
-      background: #25D366;
-      color: white;
-      border: none;
-      box-shadow: 0 15px 25px -5px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-wa:hover {
-      background: #20b859;
-      transform: translateY(-3px);
-    }
-
-    .btn-large {
-      padding: 1.2rem 2.8rem;
-      font-size: 1.3rem;
-    }
-
-    /* Hero */
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 60px;
       align-items: center;
     }
 
-    .hero-badge {
+    .badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
       background: rgba(255,255,255,0.05);
       border: 1px solid var(--border-light);
       border-radius: 60px;
-      padding: 0.6rem 1.2rem;
-      margin-bottom: 2rem;
+      padding: 8px 16px;
+      margin-bottom: 24px;
       font-size: 1rem;
     }
 
-    .pulse-dot {
+    .pulse {
       width: 12px;
       height: 12px;
-      background: #2fe6c7;
+      background: var(--secondary);
       border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(47, 230, 199, 0.2);
+      box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.2);
       animation: pulse 2s infinite;
     }
 
-    @keyframes pulse { 50% { opacity: 0.5; transform: scale(1.2); } }
+    @keyframes pulse { 50% { opacity: 0.6; transform: scale(1.3); } }
 
-    /* Tarjetas */
-    .card-grid {
+    /* Tarjetas de bonos */
+    .bonus-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0;
     }
 
-    .card {
+    .bonus-card {
       background: var(--bg-card);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      padding: 2rem;
-      transition: all 0.25s;
+      border-radius: 32px;
+      padding: 24px;
+      text-align: center;
       box-shadow: var(--shadow-lg);
     }
 
-    .card:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-5px);
+    .bonus-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
     }
 
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      background: rgba(124, 92, 255, 0.1);
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
+    .bonus-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
     }
 
-    .stat-group {
-      display: flex;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.03);
-      border-radius: 20px;
-      padding: 1rem 1.5rem;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      background: linear-gradient(145deg, white, var(--secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Video grid */
+    /* Videos */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 40px 0;
     }
 
     .video-card {
       background: var(--bg-card);
-      border-radius: var(--radius-card);
+      border-radius: 32px;
       overflow: hidden;
       border: 1px solid var(--border-light);
     }
@@ -314,115 +305,73 @@
     }
 
     .video-caption {
-      padding: 1.5rem;
+      padding: 24px;
     }
 
-    /* Sección WhatsApp */
-    .whatsapp-block {
-      background: linear-gradient(145deg, rgba(37, 211, 102, 0.1), rgba(124, 92, 255, 0.1));
+    /* CTA section */
+    .cta-block {
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.2), rgba(45, 212, 191, 0.2));
+      border-radius: 60px;
+      padding: 60px;
+      text-align: center;
       border: 1px solid var(--border-light);
-      border-radius: var(--radius-card);
-      padding: 3rem;
-      margin: 3rem 0;
+      margin: 60px 0;
+    }
+
+    /* WhatsApp section */
+    .whatsapp-block {
+      background: rgba(37, 211, 102, 0.1);
+      border-radius: 40px;
+      padding: 40px;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      margin: 40px 0;
     }
 
     .input-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin: 2rem 0;
+      gap: 16px;
+      margin: 24px 0;
     }
 
     .input-group input {
       flex: 1 1 300px;
-      padding: 1.2rem 1.8rem;
+      padding: 16px 24px;
       border-radius: 60px;
       border: 1px solid var(--border-light);
       background: rgba(0,0,0,0.3);
       color: white;
       font-size: 1.1rem;
       outline: none;
-      transition: 0.2s;
     }
 
     .input-group input:focus {
       border-color: var(--secondary);
-      box-shadow: 0 0 0 3px rgba(47, 230, 199, 0.3);
-    }
-
-    .input-group input::placeholder {
-      color: rgba(255,255,255,0.4);
-    }
-
-    /* Steps */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-    }
-
-    .step-item {
-      background: rgba(255,255,255,0.02);
-      border-radius: 30px;
-      padding: 2rem;
-      border: 1px solid var(--border-light);
-      position: relative;
-    }
-
-    .step-number {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(145deg, var(--primary), var(--secondary));
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-    }
-
-    /* FAQ */
-    .faq-item {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--border-light);
-      border-radius: 30px;
-      margin-bottom: 1rem;
-      padding: 1.5rem 2rem;
-    }
-
-    .faq-question {
-      font-weight: 700;
-      font-size: 1.3rem;
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      margin-top: 1rem;
-      color: var(--text-soft);
+      box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.3);
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border-light);
-      padding: 3rem 0;
+      padding: 40px 0;
       text-align: center;
-      color: var(--text-soft);
+      color: var(--text-dim);
     }
 
     /* Responsive */
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
       }
-      .nav-links a:not(.btn) {
+      .bonus-grid {
+        grid-template-columns: 1fr;
+      }
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links .btn {
         display: none;
       }
-      body { font-size: 16px; }
     }
   </style>
 </head>
@@ -434,206 +383,164 @@
         <span>AI<span class="text-gradient">Viral</span></span>
       </div>
       <div class="nav-links">
-        <a href="#beneficios">Beneficios</a>
         <a href="#videos">Videos</a>
-        <a href="#pasos">Pasos</a>
-        <a href="#faq">FAQ</a>
+        <a href="#bonos">Bonos</a>
+        <a href="#whatsapp">WhatsApp</a>
         <a href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" class="btn btn-primary" target="_blank">Comenzar ahora</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <!-- HERO -->
-    <section>
+    <!-- HERO / GANCHO PRINCIPAL -->
+    <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            <span>💰 Sistema activo · Paga $25 por suscriptor</span>
+          <div class="badge">
+            <span class="pulse"></span>
+            <span>🚀 Oportunidad de lanzamiento</span>
           </div>
-          <h1>Tu negocio con IA <span class="text-gradient">trabaja 24/7</span> mientras tú duermes</h1>
-          <p style="font-size: 1.3rem; color: #d0d5f0;">Emily, tu asistente IA, explica, responde y convierte por ti. Incluye todo lo necesario para empezar HOY mismo.</p>
-          <div class="stat-group">
-            <div class="stat">
-              <div class="stat-number">+3,000</div>
-              <div>agentes activos</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">+325k</div>
-              <div>vistas generadas</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">$100k+</div>
-              <div>pagados</div>
-            </div>
+          <h1>
+            <span class="text-gradient">Gana más de $6,000 al mes</span> con IA sin ser experto
+          </h1>
+          <p class="lead">
+            Esto <strong>no es para gente floja ni espectadores</strong>. Es para visionarios que quieren apalancarse de la IA, las redes sociales y un sistema que simplifica todo.
+          </p>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <a href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" class="btn btn-primary btn-large" target="_blank">
+              <i class="fas fa-rocket"></i> Quiero empezar ya
+            </a>
+            <a href="#videos" class="btn btn-large">
+              <i class="fas fa-play"></i> Ver videos
+            </a>
           </div>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
-            <a href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" class="btn btn-primary btn-large" target="_blank">✅ Quiero empezar ya</a>
-            <a href="#videos" class="btn btn-large">▶ Ver videos</a>
-          </div>
-          <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.6;">*Resultados típicos con constancia. Incluye membresía Pro por $28/mes.</p>
         </div>
-        <div style="background: rgba(255,255,255,0.02); border-radius: 40px; padding: 2rem; border: 1px solid var(--border-light);">
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <span style="font-size: 3rem;">🤖</span>
-              <div><strong style="font-size: 1.6rem;">Emily</strong><br>Agente IA automatizado</div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-              <div style="background: rgba(124,92,255,0.1); padding: 1.2rem; border-radius: 20px;">📹 Publica en 8 redes</div>
-              <div style="background: rgba(47,230,199,0.1); padding: 1.2rem; border-radius: 20px;">📊 Analiza tendencias</div>
-              <div style="background: rgba(255,200,87,0.1); padding: 1.2rem; border-radius: 20px;">💬 Responde leads</div>
-              <div style="background: rgba(124,92,255,0.1); padding: 1.2rem; border-radius: 20px;">📈 Optimiza campañas</div>
-            </div>
-            <div style="font-size: 1.2rem;">➕ 10 libros digitales + clases en vivo L a V</div>
-          </div>
+        <div style="background: var(--bg-card); border-radius: 40px; padding: 30px; border: 1px solid var(--border-light);">
+          <i class="fas fa-quote-right" style="font-size: 3rem; color: var(--primary); opacity: 0.5;"></i>
+          <p style="font-size: 1.4rem; font-style: italic; margin: 20px 0;">
+            "Algo como esto no se había visto. Es de esas oportunidades que debes tomar sí o sí cuando se presentan."
+          </p>
+          <p style="font-weight: 800;">— Equipo AI Viral</p>
         </div>
       </div>
     </section>
 
-    <!-- BENEFICIOS -->
-    <section id="beneficios">
+    <!-- BONOS EXCLUSIVOS (más de $1000 en regalos) -->
+    <section id="bonos">
       <div class="container">
-        <h2>Todo lo que obtienes al <span class="text-gradient">activar</span></h2>
-        <p style="font-size: 1.3rem; max-width: 700px;">Recursos, automatización y comunidad para que tu única tarea sea compartir tu enlace.</p>
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-icon">🤖</div>
-            <h3>Asistente Emily</h3>
-            <p>Explica el negocio, responde preguntas y cierra prospectos automáticamente 24/7.</p>
+        <h2 style="text-align: center;">
+          <span class="text-highlight">$1,000+ en bonos</span> por ser miembro Pro hoy
+        </h2>
+        <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+          Solo para quienes toman acción inmediata. Clases GRATIS de cómo usar la IA, publicar en redes y crear videos en segundos.
+        </p>
+
+        <div class="bonus-grid">
+          <div class="bonus-card">
+            <div class="bonus-icon"><i class="fas fa-robot"></i></div>
+            <h4>IA para videos</h4>
+            <p>Crea textos y videos en minutos listos para subir. Tu contenido trabajando por ti 24/7.</p>
           </div>
-          <div class="card">
-            <div class="card-icon">📚</div>
-            <h3>10 libros digitales</h3>
-            <p>De regalo para que compartas con tu comunidad o los vendas como producto propio.</p>
+          <div class="bonus-card">
+            <div class="bonus-icon"><i class="fas fa-chart-line"></i></div>
+            <h4>Clases en vivo</h4>
+            <p>Acceso GRATIS a entrenamientos diarios (L-V) sobre estrategia de redes y automatización.</p>
           </div>
-          <div class="card">
-            <div class="card-icon">🎓</div>
-            <h3>Clases en vivo (L–V)</h3>
-            <p>Acceso a entrenamiento diario con bonos de más de $1000 en formación.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Sistema de 4 pasos</h3>
-            <p>Estrategia probada para monetizar desde el primer día con IA.</p>
+          <div class="bonus-card">
+            <div class="bonus-icon"><i class="fas fa-users"></i></div>
+            <h4>Comunidad privada</h4>
+            <p>Soporte directo de expertos que ya están generando con el sistema.</p>
           </div>
         </div>
+
+        <p style="text-align: center; font-size: 1.4rem; margin-top: 40px;">
+          <i class="fas fa-bolt" style="color: var(--accent);"></i> 
+          <strong>El potencial de ganancias lo decides tú. No hay límite.</strong>
+        </p>
       </div>
     </section>
 
-    <!-- VIDEOS (con tus enlaces) -->
+    <!-- VIDEOS (presentación + tutorial) -->
     <section id="videos">
       <div class="container">
-        <h2>Mira lo fácil que es</h2>
-        <p style="font-size: 1.3rem;">En menos de 5 minutos entiendes el sistema y das el primer paso.</p>
+        <h2 style="text-align: center;">Mira cómo funciona en <span class="text-gradient">2 videos</span></h2>
         <div class="video-grid">
+          <!-- Video 1: Presentación -->
           <div class="video-card">
             <div class="video-wrapper">
               <iframe src="https://www.youtube.com/embed/0p4cJKQz80I" title="Presentación" allowfullscreen></iframe>
             </div>
             <div class="video-caption">
-              <h3>🎬 Video 1 · Presentación</h3>
-              <p>Descubre cómo funciona la IA que paga $25 por suscriptor.</p>
+              <h3><i class="fas fa-play-circle" style="color: var(--secondary);"></i> Video presentación</h3>
+              <p>Descubre cómo el sistema paga $25 por suscriptor y por qué esto es una oportunidad única.</p>
             </div>
           </div>
+          <!-- Video 2: Tutorial -->
           <div class="video-card">
             <div class="video-wrapper">
               <iframe src="https://www.youtube.com/embed/KeXiwOWlai8" title="Tutorial" allowfullscreen></iframe>
             </div>
             <div class="video-caption">
-              <h3>🚀 Video 2 · Primer paso y activación</h3>
-              <p>Aprende a activar tu cuenta y empezar a ganar hoy mismo.</p>
+              <h3><i class="fas fa-rocket" style="color: var(--primary);"></i> Tutorial: primer paso</h3>
+              <p>Aprende a activarte HOY mismo y empieza a generar desde el día 1.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PASOS + WHATSAPP (sección integrada) -->
-    <section id="pasos">
-      <div class="container">
-        <h2>Comienza en <span class="text-gradient">4 pasos</span></h2>
-        <div class="steps-grid">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <h3>Obtén tu link personal</h3>
-            <p>Haz clic en "Comenzar ahora" y obtén tu enlace único de afiliado.</p>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <h3>Activa membresía Pro ($28)</h3>
-            <p>Desbloquea a Emily, los libros y las clases en vivo.</p>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <h3>Comparte valor</h3>
-            <p>Publica videos cortos o regala los libros digitales.</p>
-          </div>
-          <div class="step-item">
-            <div class="step-number">4</div>
-            <h3>Deja que Emily convierta</h3>
-            <p>Ella atiende, responde y cierra mientras tú creces.</p>
-          </div>
-        </div>
+    <!-- BOTÓN COMENZAR AHORA (después de videos) -->
+    <div class="container" style="text-align: center; margin: 20px 0 60px;">
+      <a href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" class="btn btn-primary btn-large" target="_blank">
+        <i class="fas fa-arrow-right"></i> Comenzar ahora
+      </a>
+      <p style="margin-top: 16px; color: var(--text-dim);">
+        Por cada suscriptor que ingresa después de ti, una oportunidad de llegar a <strong>más de $25,000 al mes</strong> con plan, estrategia y comunidad.
+      </p>
+    </div>
 
-        <!-- BLOQUE WHATSAPP (pago de $28 para clases) -->
-        <div class="whatsapp-block" id="whatsapp">
-          <h3 style="font-size: 2.2rem;">📲 ¿Ya pagaste los $28?</h3>
-          <p style="font-size: 1.2rem;">Envía tu comprobante por WhatsApp y accede a las clases en vivo de lunes a viernes.</p>
+    <!-- SECCIÓN WHATSAPP (pago $28 para clases) -->
+    <section id="whatsapp">
+      <div class="container">
+        <div class="whatsapp-block">
+          <h2 style="margin-bottom: 0.5rem;"><i class="fab fa-whatsapp" style="color: #25D366;"></i> ¿Ya pagaste los $28?</h2>
+          <p style="font-size: 1.3rem;">Accede a las <strong>clases en vivo de lunes a viernes</strong> enviando tu comprobante.</p>
+          
           <div class="input-group">
             <input type="text" id="nombreCompleto" placeholder="Escribe tu nombre y apellido" value="">
             <a href="#" id="waLink" class="btn btn-wa btn-large" target="_blank">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-right: 0.5rem;">
-                <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.528 6.17 2.528 11.25c0 1.762.47 3.482 1.363 5.005L2 22l5.974-1.502c1.518.846 3.2 1.294 4.972 1.294 5.208 0 9.478-4.17 9.478-9.25 0-2.474-.988-4.8-2.776-6.614zM12.006 20.02c-1.47 0-2.913-.4-4.155-1.15l-.298-.178-3.644.916.98-3.45-.194-.31c-.785-1.24-1.2-2.666-1.2-4.147 0-4.126 3.44-7.48 7.67-7.48 2.05 0 3.976.796 5.424 2.24 1.448 1.444 2.244 3.342 2.244 5.366 0 4.127-3.44 7.482-7.67 7.482z"/>
-                <path d="M16.122 13.474c-.312.162-1.838.874-2.117.974-.28.1-.49.15-.7-.15-.21-.3-.84-.974-1.03-1.174-.19-.2-.38-.23-.69-.08-.312.15-1.212.708-1.412.91-.2.2-.26.31.01.61.26.3.948 1.123 1.577 1.512.63.39 1.1.34 1.617.09.517-.25 2.165-1.022 2.457-1.422.292-.4.192-.7.02-.77-.17-.07-.37-.1-.52-.16z"/>
-              </svg>
-              Enviar comprobante
+              <i class="fab fa-whatsapp"></i> Enviar comprobante
             </a>
           </div>
-          <p style="margin-top: 1rem; font-size: 0.95rem;">Al hacer clic, se abrirá WhatsApp con un mensaje listo. Solo confirma envío.</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 4rem;">
-          <a href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" class="btn btn-primary btn-large" target="_blank">🔥 Comenzar ahora (link directo)</a>
+          <p style="font-size: 0.95rem;">Al hacer clic, se abrirá WhatsApp con un mensaje predefinido. Solo confirma envío.</p>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <h2>Preguntas frecuentes</h2>
-        <div style="margin-top: 3rem;">
-          <div class="faq-item">
-            <div class="faq-question">¿Qué es el pago de $25 por suscriptor? <span>▼</span></div>
-            <div class="faq-answer">Cuando alguien se une a través de tu link y cumple los requisitos del sistema, recibes una comisión de $25. Todo automático.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">¿Qué incluye la membresía Pro de $28/mes? <span>▼</span></div>
-            <div class="faq-answer">Acceso a la asistente Emily, 10 libros digitales, herramientas de marketing, clases en vivo de lunes a viernes y soporte en comunidad.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">¿Cómo accedo a las clases en vivo? <span>▼</span></div>
-            <div class="faq-answer">Una vez actives tu membresía Pro, envía el comprobante por WhatsApp usando el botón de arriba con tu nombre. Te agregaremos al grupo.</div>
-          </div>
-        </div>
+    <!-- FRASE DE OPORTUNIDAD (extra) -->
+    <div class="container" style="text-align: center; padding: 40px 0;">
+      <div style="background: linear-gradient(145deg, rgba(139,92,246,0.1), rgba(45,212,191,0.1)); border-radius: 60px; padding: 40px;">
+        <i class="fas fa-quote-left" style="font-size: 3rem; color: var(--primary); opacity: 0.3;"></i>
+        <p style="font-size: 1.8rem; font-weight: 700; max-width: 900px; margin: 0 auto;">
+          "Por cada suscriptor que ingresa después de ti es una oportunidad para llegar a ganar más de $25,000 al mes con un plan, una estrategia y una comunidad que está ahí para apoyarte."
+        </p>
+        <p style="margin-top: 30px;">— <strong>Esto no se ha escuchado antes. Tómalo ahora.</strong></p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2026 AI Viral Downline · Todos los derechos reservados · <a href="#" style="color: var(--text-soft);">Aviso legal</a></p>
-      <p style="margin-top: 1rem;">Este sitio no es parte de Facebook ni YouTube. Los resultados pueden variar.</p>
+      <p>© 2026 AI Viral Downline · Todos los derechos reservados · <a href="#" style="color: var(--text-dim);">Aviso legal</a></p>
+      <p style="margin-top: 10px;">Este sitio no es parte de Facebook ni YouTube. Resultados pueden variar.</p>
     </div>
   </footer>
 
   <script>
-    // Año dinámico
-    document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} AI Viral Downline · Todos los derechos reservados · <a href="#" style="color: var(--text-soft);">Aviso legal</a>`;
+    // Actualizar año
+    document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} AI Viral Downline · Todos los derechos reservados · <a href="#" style="color: var(--text-dim);">Aviso legal</a>`;
 
-    // Smooth scroll para anclas
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -660,7 +567,7 @@
     }
 
     input.addEventListener('input', actualizarWA);
-    actualizarWA(); // inicializar
+    actualizarWA();
   </script>
 </body>
 </html>

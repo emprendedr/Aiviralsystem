@@ -301,6 +301,69 @@
       margin-top:10px;color: rgba(255,255,255,.55);font-size:12.5px;line-height:1.45
     }
 
+    /* Estilos para la nueva sección de WhatsApp */
+    .whatsapp-section {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: radial-gradient(800px 200px at 30% 20%, rgba(47,230,199,.12), transparent 70%),
+                  radial-gradient(800px 200px at 70% 80%, rgba(124,92,255,.12), transparent 70%),
+                  rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    .whatsapp-section h3 {
+      font-size: 24px;
+      margin: 0 0 8px;
+      background: linear-gradient(135deg, #fff, var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 10px;
+      align-items: center;
+    }
+    .input-group input {
+      flex: 1 1 250px;
+      padding: 14px 18px;
+      border-radius: 60px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(0,0,0,.3);
+      color: white;
+      font-size: 16px;
+      backdrop-filter: blur(5px);
+      transition: 0.2s;
+    }
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--accent2);
+      box-shadow: 0 0 0 3px rgba(47,230,199,.2);
+    }
+    .input-group input::placeholder {
+      color: rgba(255,255,255,.5);
+    }
+    .wa-button {
+      background: #25D366;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 60px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+      transition: 0.2s;
+    }
+    .wa-button:hover {
+      background: #20b859;
+      transform: scale(1.02);
+    }
+
     .faq{
       margin-top:14px;
       border-radius: var(--radius);
@@ -369,7 +432,7 @@
         <a href="#videos">Videos</a>
         <a href="#pasos">Primeros pasos</a>
         <a href="#faq">FAQ</a>
-        <a class="btn primary small" href="#registro">Empezar ahora</a>
+        <a class="btn primary small" href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" target="_blank">Empezar ahora</a>
       </div>
     </div>
   </nav>
@@ -396,7 +459,7 @@
         </div>
 
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-          <a class="btn primary" href="#registro">
+          <a class="btn primary" href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" target="_blank">
             <span>✅ Quiero empezar</span>
             <span style="opacity:.9">→</span>
           </a>
@@ -488,7 +551,7 @@
         <h2 class="h2">Lo que recibes al activar tu membresía Pro</h2>
         <p class="p2">Todo diseñado para que el seguimiento y la explicación no dependan de ti 24/7.</p>
       </div>
-      <a class="btn small" href="#registro">Ver cómo empezar →</a>
+      <a class="btn small" href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" target="_blank">Ver cómo empezar →</a>
     </div>
 
     <div class="cards">
@@ -554,43 +617,36 @@
         <h2 class="h2">Mira esto en 2 minutos</h2>
         <p class="p2">Un video corto para entender el “por qué” y un tutorial para dar el primer paso.</p>
       </div>
-      <span class="pill">🎬 Reemplaza los links por tus videos</span>
+      <span class="pill">🎬 Videos actualizados</span>
     </div>
 
     <div class="videoGrid">
       <div class="videoCard">
         <header>
-          <h3>Video #1 — Presentación (corto)</h3>
-          <span>60–90s</span>
+          <h3>Video #1 — Presentación</h3>
+          <span>1 min</span>
         </header>
         <div class="videoBox">
           <div class="ratio">
-            <!-- OPCIÓN A: YouTube (reemplaza el ID) -->
             <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-              title="Presentación"
+              src="https://www.youtube.com/embed/0p4cJKQz80I"
+              title="Presentación del sistema"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
-
-            <!-- OPCIÓN B: MP4 (si prefieres, comenta el iframe y usa video)
-            <video controls playsinline>
-              <source src="presentacion.mp4" type="video/mp4" />
-            </video>
-            -->
           </div>
         </div>
       </div>
 
       <div class="videoCard">
         <header>
-          <h3>Video #2 — Tutorial (primer paso)</h3>
-          <span>2–4 min</span>
+          <h3>Video #2 — Tutorial: Primer paso y activación</h3>
+          <span>3 min</span>
         </header>
         <div class="videoBox">
           <div class="ratio">
             <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-              title="Tutorial primer paso"
+              src="https://www.youtube.com/embed/KeXiwOWlai8"
+              title="Tutorial para activarse y ganar hoy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
@@ -605,7 +661,7 @@
         <h2 class="h2">Los pasos para activar tu automatización</h2>
         <p class="p2">Sencillo, directo y sin vueltas. Tú avanzas con guía.</p>
       </div>
-      <a class="btn small" href="#registro">Quiero mi link →</a>
+      <a class="btn small" href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" target="_blank">Quiero mi link →</a>
     </div>
 
     <div class="steps">
@@ -638,19 +694,41 @@
       </div>
     </div>
 
+    <!-- NUEVA SECCIÓN PARA PAGO POR WHATSAPP -->
+    <div class="whatsapp-section" id="whatsapp-pago">
+      <h3>📲 Activa tus clases en vivo (Lunes a Viernes)</h3>
+      <p style="color: var(--muted); font-size: 1.1rem; margin-top: 5px;">
+        Envía el comprobante de pago de <strong>$28</strong> por WhatsApp y recibe acceso inmediato a las clases en vivo.
+      </p>
+      <div class="input-group">
+        <input type="text" id="nombreApellido" placeholder="Tu nombre y apellido *" value="">
+        <a href="#" id="waLink" class="btn wa-button" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-right: 5px;">
+            <path d="M19.077 4.928C17.191 3.041 14.683 2 12.006 2 6.798 2 2.528 6.17 2.528 11.25c0 1.762.47 3.482 1.363 5.005L2 22l5.974-1.502c1.518.846 3.2 1.294 4.972 1.294 5.208 0 9.478-4.17 9.478-9.25 0-2.474-.988-4.8-2.776-6.614zM12.006 20.02c-1.47 0-2.913-.4-4.155-1.15l-.298-.178-3.644.916.98-3.45-.194-.31c-.785-1.24-1.2-2.666-1.2-4.147 0-4.126 3.44-7.48 7.67-7.48 2.05 0 3.976.796 5.424 2.24 1.448 1.444 2.244 3.342 2.244 5.366 0 4.127-3.44 7.482-7.67 7.482z"/>
+            <path d="M16.122 13.474c-.312.162-1.838.874-2.117.974-.28.1-.49.15-.7-.15-.21-.3-.84-.974-1.03-1.174-.19-.2-.38-.23-.69-.08-.312.15-1.212.708-1.412.91-.2.2-.26.31.01.61.26.3.948 1.123 1.577 1.512.63.39 1.1.34 1.617.09.517-.25 2.165-1.022 2.457-1.422.292-.4.192-.7.02-.77-.17-.07-.37-.1-.52-.16z" fill="white"/>
+          </svg>
+          Enviar comprobante por WhatsApp
+        </a>
+      </div>
+      <p class="fine" style="margin-top: 10px;">
+        ⚡ Al hacer clic se generará un mensaje automático con tu nombre. Asegúrate de escribir tu nombre completo correctamente.
+      </p>
+    </div>
+    <!-- FIN NUEVA SECCIÓN -->
+
     <div class="ctaBox" id="registro">
       <div>
         <h3>¿Listo para probarlo?</h3>
         <p>
-          Si quieres, aquí colocas tu botón de registro. Recomendación: conecta esto a tu página de registro/checkout y a WhatsApp.
+          Accede ahora con tu link personal y comienza a construir tu negocio automatizado.
         </p>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn primary" href="https://TU-LINK-AQUI.com" target="_blank" rel="noopener">
-          ✅ Registrarme ahora
+        <a class="btn primary" href="https://aivdownline.haily.ai/?id=Viralia&firstname=Jobs&lastname=Cruz" target="_blank" rel="noopener">
+          ✅ Comenzar ahora
         </a>
-        <a class="btn" href="https://wa.me/1TU_NUMERO" target="_blank" rel="noopener">
-          💬 Enviar WhatsApp
+        <a class="btn" href="#whatsapp-pago">
+          💬 Pagar con WhatsApp
         </a>
       </div>
     </div>
@@ -700,12 +778,11 @@
 
       <details>
         <summary>
-          ¿Cuánto tiempo toma ver resultados?
+          ¿Cómo accedo a las clases en vivo?
           <span class="chev">▾</span>
         </summary>
         <div class="ans">
-          Depende de tu constancia, calidad de contenido y seguimiento. Lo importante es que aquí reduces fricción con automatización,
-          estructura y guía.
+          Debes enviar el comprobante de pago de $28 por WhatsApp con tu nombre y apellido. Arriba tienes la sección habilitada para hacerlo fácilmente.
         </div>
       </details>
     </div>
@@ -778,6 +855,25 @@
       });
     }, {threshold:.35});
     io.observe(c);
+
+    // Generar enlace de WhatsApp con nombre y apellido
+    const inputNombre = document.getElementById('nombreApellido');
+    const waLink = document.getElementById('waLink');
+    const telefono = '13232850508'; // Número sin el '+'
+    const mensajeBase = 'Hola, mi nombre es [NOMBRE] y quiero enviar el recibo de $28 para acceder a las clases en vivo.';
+
+    function actualizarEnlace() {
+      let nombre = inputNombre.value.trim();
+      if (nombre === '') {
+        nombre = '[Nombre y Apellido]';
+      }
+      const mensaje = mensajeBase.replace('[NOMBRE]', nombre);
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      waLink.href = url;
+    }
+
+    inputNombre.addEventListener('input', actualizarEnlace);
+    actualizarEnlace(); // Inicializar
   </script>
 </body>
 </html>
